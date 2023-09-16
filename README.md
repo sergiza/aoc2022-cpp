@@ -1,2 +1,4 @@
 # aoc2022-cpp
-Practicando C++ &amp; AoC
+https://adventofcode.com/2022
+
+Practicando C++ &AoC
