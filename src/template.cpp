@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "utils.cpp"
 using namespace std;
 
 void e1(vector<string> input)

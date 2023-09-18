@@ -2,24 +2,8 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "utils.cpp"
 using namespace std;
-
-vector<string> split(string line)
-{
-            // con lo facil que era en Rust...      let round = line.split(" ");
-            vector<std::string> round;
-            size_t start = 0;
-            size_t end = line.find(' ');
-
-            while (end != std::string::npos) {
-                round.push_back(line.substr(start, end - start));
-                start = end + 1;
-                end = line.find(' ', start);
-            }
-            round.push_back(line.substr(start, end));
-
-            return round;
-}
 
 int rock_paper_scissors(int elf, int me)
 {
@@ -76,7 +60,7 @@ void e1(vector<string> input)
     {
         if (line != "")
         {
-            vector<string> round = split(line);
+            vector<string> round = split(line, ' ');
             for (string hand : round)
             {
                 if (hand[0] == 'A') { elf = 1; }
@@ -102,7 +86,7 @@ void e2(vector<string> input)
     {
         if (line != "")
         {
-            vector<string> round = split(line);
+            vector<string> round = split(line, ' ');
             for (string hand : round)
             {
                 if (hand[0] == 'A') { elf = 1; }
